@@ -28,6 +28,8 @@ export function fetchGames() {
             dispatch(fetchGamesSuccess(json));
             return json;
         })
+        .then(x => console.log(x))
+
         .catch(error => { 
             console.log(error);
             dispatch(fetchGamesFailure(error));

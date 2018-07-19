@@ -73,43 +73,43 @@ class Games extends React.Component {
         switch(league) {
             case 'Englandleague':
             console.log('England');
-            this.setState(() => ({ league: x["England league"] }));
+            this.setState(() => ({ league: x["England-league"] }));
             break;
 
             case 'Franceleague':
                 console.log('France');
-                this.setState(() => ({ league: x["France league"] }));
+                this.setState(() => ({ league: x["France-league"] }));
                 break;
 
             case 'Germanleague':
                 console.log('German');
-                this.setState(() => ({ league: x["German league"] }));
+                this.setState(() => ({ league: x["German-league"] }));
                 break;
 
             case 'Isrealleague':
                 console.log('Ísrael');
                 console.log(x.Isreal-league);
-                this.setState(() => ({ league: x["Isreal league"] }));
+                this.setState(() => ({ league: x["Isreal-league"] }));
                 break;
 
                 case 'spanishleague':
                 console.log('Spanish');
-                this.setState(() => ({ league: x["spanish league"] }));
+                this.setState(() => ({ league: x["spanish-league"] }));
                 break;
 
                 case 'Italyleague':
                 console.log('Italy');
-                this.setState(() => ({ league: x["Italy league"] }));
+                this.setState(() => ({ league: x["Italy-league"] }));
                 break;
 
                 case 'championsleague':
                     console.log('Champions');
-                    this.setState(() => ({ league: x["Champions league"] }));
+                    this.setState(() => ({ league: x["Champions-league"] }));
                     break;
                 
                 case 'uefaleague':
                     console.log('uefa');
-                    this.setState(() => ({ league: x["uefa league"] }));
+                    this.setState(() => ({ league: x["uefa-league"] }));
                     break;
                 
                 case 'Otherleagues':
