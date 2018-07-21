@@ -1,11 +1,10 @@
 import React from 'react';
-import Moment from 'react-moment';
 
 const Game = (props) => (  
     <div className='game' onClick={clickOnMobile}>
         <div className='game-row'>
             <div className='game-column game-column-left'>
-                <a className='game-link' href={props.link}>צפה</a>
+                <a className='game-link' href={props.link} target="_blank">צפה</a>
             </div>
             <div className='game-column game-column-center'> 
                 <div className='game-title'>

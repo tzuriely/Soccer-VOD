@@ -72,7 +72,7 @@
     font-size: $l-size;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and  (max-width: 800px) {
     .game-column-right {
         display: none;
     }

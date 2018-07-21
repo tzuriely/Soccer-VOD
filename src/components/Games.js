@@ -18,7 +18,7 @@ class Games extends React.Component {
     render()
     {
         if (!this.props.games.loading||this.state.league === []) {
-            return <div>Loading...</div>;
+            return <div>Loading..........</div>;
           }
         
         return (
