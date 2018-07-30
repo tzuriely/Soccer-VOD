@@ -24,7 +24,7 @@ const Game = (props) => (
 )
 
 const clickOnMobile = (e) => {
-    if( window.innerWidth < 768) {      
+    if( window.innerWidth < 1024) {      
         const link = document.getElementsByClassName('game-link');
         link[0].click(); 
       } 

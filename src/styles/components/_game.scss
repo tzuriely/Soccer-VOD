@@ -1,20 +1,27 @@
 .game {
-    text-align: center;
-    //height: 80px;
-    margin: 0 auto;
-    background-color: $game-title-color;
-    color: antiquewhite;
-    max-width: 80rem;
-    margin-bottom: 25px;
-    width: 100%;
-    
+    text-align: center; margin: 0 auto; background-color: $game-title-color;
+    color: antiquewhite; max-width: 80rem; margin-bottom: 25px; width: 100%;
+
+    @media #{$breakMobileBig} {
+        width: 75%;
+    }
+
+    @media #{$breakMobileSmall} {
+        width: 100%;
+    }
+
+    @media #{$breakMobile}
+    {
+        flex-direction: column; display: block;  max-width: none;
+    }
 }
 
 .game-row {
-    //margin: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
+
+    @media #{$breakMobileBig} {
+        height: 110px;
+    }
 }
 .game-row ::after {
     content: "";
@@ -23,22 +30,30 @@
 }
 
 .game-column {
-    float: left;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    float: left; height: 80px; display: flex;
+    align-items: center; justify-content: center;
 }
+
 .game-column-right {
     width: 10%;
+
+    @media #{$breakMobile} {
+        display: none;    
+    }
 }
 .game-column-center {
     width: 75%;
+
+    @media #{$breakMobile} {
+        width: 100%;
+    }
 }
 .game-column-left {
-    width: 15%;
-    transition:.25s;
-    cursor: pointer;
+    width: 15%; transition:.35s; cursor: pointer;
+
+    @media #{$breakMobile} {
+        display: none;
+    }
 }
 
 .game-column-left:hover {
@@ -53,52 +68,31 @@
     position: absolute;
 }
 .game-title {
-    //background: rgba(97, 159, 221,0.5);
-    font-size: $l-size;
-    font-weight: bold;
-    text-align: center;
-    padding-right: 10px;
+    font-size: $l-size; font-weight: bold;
+    text-align: center; padding-right: 10px;
+
+    @media #{$breakMobile} {
+        font-size: 2rem; font-weight: bold; text-align: center;
+        display: flex; align-items: center; justify-content: center;
+    }
+
+    @media #{$breakMobileBig} {
+        font-size: 3.3rem;
+    }
 }
+
 .game-details {
     background: rgba(77, 149, 221,0.5);
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @media #{$breakMobileBig} {
+        font-size: 1.8rem;
+    }
 }
 
 .game-link {
     color: $game-link-color;
     text-decoration: none;
     font-size: $l-size;
-}
-
-@media only screen and  (max-width: 800px) {
-    .game-column-right {
-        display: none;
-    }
-
-    .game-column-left {
-        display: none;
-    }
-
-    .game-column-center {
-        width: 100%;
-    }
-
-    .game-title {
-        //background: rgba(97, 159, 221,0.5);
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        //padding-right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .game {
-         flex-direction: column;
-         display: block;
-        // flex: none;
-        // left: 0px;
-    }
 }

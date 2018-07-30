@@ -3,16 +3,25 @@
 html {
   font-size: 62.5%;
 
-  background: url(/images/cover.jpg) no-repeat center center fixed; 
+  background: url(/images/coverDesktop.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  @media #{$breakMobile} {
+    background: url(/images/coverMobile.jpg) no-repeat center center fixed; 
+
+  }
 }
 
 body {
   font-family: Calibri, sans-serif;
   font-size: $m-size;
+  margin: 0px;
+  padding: 0px;
   // display: flex;
   // height: 100vh;
   // justify-content: center;

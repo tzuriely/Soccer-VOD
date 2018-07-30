@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Bar from './Bar';
 import Game from './Game';
 import {fetchGames} from '../actions/games';
+import GoogleAdd from './GoogleAd';
 
 class Games extends React.Component {
     constructor() {
@@ -37,7 +38,7 @@ class Games extends React.Component {
                             )}
                         </ul>
                     </div>
-
+                    {/* <GoogleAdd /> */}
                 </div>
         )
     }

@@ -1,0 +1,21 @@
+.SearchBox {
+    background: white; width: 250px; height: 40px;
+    border: none; display: flex; align-items: center; 
+    box-shadow:3px 3px 0 rgba(0,0,0,.25);
+}
+
+.SearchBox:hover {
+    cursor: pointer;
+}
+
+.SearchIcon {
+    color: white; font-size: 25px; background: rgb(255, 123, 0);
+    height: 100%; width: 50px; display: flex;
+    align-items: center; justify-content: center;
+}
+
+.SearchInput {
+    border: none; text-align: right; width: 100%;
+    margin-right: 10px; margin-left: 10px; font-size: 20px;
+    outline: 0px;
+}
