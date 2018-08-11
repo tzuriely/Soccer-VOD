@@ -20,6 +20,11 @@ nav {
 .nav-menu-top-searchBox {
   margin-top: 20px;
   margin-left: 20px;
+
+  @media #{$breakMobile} {
+    margin:auto;
+    margin-top: 20px;
+  }
 }
 
 .nav-menu-bottom {

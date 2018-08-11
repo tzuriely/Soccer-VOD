@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import Bar from './Bar';
 import Game from './Game';
 import {fetchGames} from '../actions/games';
-import GoogleAdd from './GoogleAd';
+import {selectLeague} from '../actions/selectedLeague';
+
 
 class Games extends React.Component {
     constructor() {
@@ -11,15 +12,18 @@ class Games extends React.Component {
         this.onChoose = this.onChoose.bind(this);
         this.returnProviderImage = this.returnProviderImage.bind(this);
 
-        this.state = {
-            league: []
-        }
     }
 
     render()
     {
-        if (!this.props.games.loading||this.state.league === []) {
-            return <div>Loading..........</div>;
+        if (!this.props.games.loading||this.props.selectedGames === []) {
+            return(
+                    <div>
+                        <div>
+                            <Bar onChoose = {this.onChoose}/>
+                        </div>
+                        <div>Loading..........</div>
+                    </div>) ;
           }
         
         return (
@@ -29,7 +33,7 @@ class Games extends React.Component {
                     </div>
                     <div className='games-area'>
                         <ul>
-                            {this.state.league.map((game, index) =>
+                            {this.props.selectedGames.map((game, index) =>
                             <Game key={index} link = {game.url}
                             league = {game.league}
                             title = {game.title}
@@ -67,62 +71,13 @@ class Games extends React.Component {
     }
 
     onChoose(league) {
-        // console.log(this.props.games.games);
-         var x = this.props.games.games;
-        // console.log(x);
-
-        switch(league) {
-            case 'Englandleague':
-            console.log('England');
-            this.setState(() => ({ league: x["England-league"] }));
-            break;
-
-            case 'Franceleague':
-                console.log('France');
-                this.setState(() => ({ league: x["France-league"] }));
-                break;
-
-            case 'Germanleague':
-                console.log('German');
-                this.setState(() => ({ league: x["German-league"] }));
-                break;
-
-            case 'Isrealleague':
-                console.log('Ísrael');
-                console.log(x.Isreal-league);
-                this.setState(() => ({ league: x["Isreal-league"] }));
-                break;
-
-                case 'spanishleague':
-                console.log('Spanish');
-                this.setState(() => ({ league: x["spanish-league"] }));
-                break;
-
-                case 'Italyleague':
-                console.log('Italy');
-                this.setState(() => ({ league: x["Italy-league"] }));
-                break;
-
-                case 'championsleague':
-                    console.log('Champions');
-                    this.setState(() => ({ league: x["Champions-league"] }));
-                    break;
-                
-                case 'uefaleague':
-                    console.log('uefa');
-                    this.setState(() => ({ league: x["uefa-league"] }));
-                    break;
-                
-                case 'Otherleagues':
-                    console.log('Other');
-                    this.setState(() => ({ league: x["Other leagues"] }));
-                    break;
-        }
+        this.props.dispatch(selectLeague(this.props.games, league));
     }
 } 
             
 const mapStateToProps = state => ({
-    games: state.games
+    games: state.games,
+    selectedGames: state.selectedGames
  });
 
 export default connect(mapStateToProps)(Games);

@@ -24,31 +24,31 @@ class Bar extends React.Component {
                             <div onClick={this.classToggle} className="Navbar__Link Navbar__Link-toggle">בחר ליגה</div>
                             <div className="nav-items" >
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('Englandleague')}>אנגלית</a>
+                                    <a onClick = {() => this.props.onChoose('England-league')}>אנגלית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('Franceleague')}>צרפתית</a>
+                                    <a onClick = {() => this.props.onChoose('France-league')}>צרפתית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('Germanleague')}>גרמנית</a>
+                                    <a onClick = {() => this.props.onChoose('German-league')}>גרמנית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('Isrealleague')}>ישראלית</a>
+                                    <a onClick = {() => this.props.onChoose('Isreal-league')}>ישראלית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('spanishleague')}>ספרדית</a>
+                                    <a onClick = {() => this.props.onChoose('spanish-league')}>ספרדית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('Italyleague')}>איטלקית</a>
+                                    <a onClick = {() => this.props.onChoose('Italy-league')}>איטלקית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('championsleague')}>אלופות</a>
+                                    <a onClick = {() => this.props.onChoose('Champions-league')}>אלופות</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('uefaleague')}>אירופית</a>
+                                    <a onClick = {() => this.props.onChoose('uefa-league')}>אירופית</a>
                                 </div>
                                 <div onClick={this.classToggle}>
-                                    <a onClick = {() => this.props.onChoose('Otherleagues')}>נידחים</a>
+                                    <a onClick = {() => this.props.onChoose('Other leagues')}>נידחים</a>
                                 </div>
                         </div>
                     </div>

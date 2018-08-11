@@ -8,6 +8,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 
+import WatchingList from './components/watchList/WatchingList'
+
 library.add(faStroopwafel)
 
 
@@ -19,8 +21,9 @@ const fullStore = gamesStore();
 // console.log(state);
 
 const jsx = (
-     <Provider store= {fullStore}>
-         <Games /> 
-     </Provider>
+    <WatchingList />
+    //  <Provider store= {fullStore}>
+    //      <Games /> 
+    //  </Provider>
 )
 ReactDOM.render(jsx, document.getElementById('app'));

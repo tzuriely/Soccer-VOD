@@ -1,6 +1,6 @@
 .games-area {
-    padding-top: 180px;
-
+    padding-top: 220px;
+    margin-top: 30px;
     @media #{$breakMobile} {
         padding-top: 15px; display: flex; align-items: center; justify-content: center;
         width: 100%;

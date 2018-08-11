@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import {fetchSearch} from '../actions/search';
 
 
 
@@ -21,13 +23,13 @@ class SearchBox extends React.Component {
 
     render() {
 
-        var mainClassName="SearchBox " + this.props.className;
+        var mainClassName="searchBox " + this.props.className;
         return (
             <div className= {mainClassName}>
-                <div className="SearchIcon" onClick={this.handleOnClick}>
+                <div className="searchBox-icon" onClick={this.handleOnClick}>
                     <FontAwesomeIcon icon={faSearch} />                     
                 </div>
-                <input className="SearchInput" type="text" placeholder="חיפוש"
+                <input className="searchBox-input" type="text" placeholder="חיפוש"
                 value={this.state.query}
                 onChange={this.handleInputChange}
                 onKeyDown={this.handleOnEnter} />
@@ -46,6 +48,7 @@ class SearchBox extends React.Component {
         if(e.keyCode == 13)
         {
             console.log(this.state.query);
+            this.props.startSearch(this.state.query);
         }
         else {
         }
@@ -53,8 +56,13 @@ class SearchBox extends React.Component {
 
     handleOnClick = () => {
         console.log(this.state.query);
+        this.props.startSearch(this.state.query);
     }
 
 }
 
-export default SearchBox;
+const mapDispatchToProps = (dispatch) => ({
+    startSearch: (query) => dispatch(fetchSearch(query))
+  });
+
+export default connect(undefined, mapDispatchToProps)(SearchBox);
