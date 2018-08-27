@@ -19,22 +19,27 @@ class WatchingList extends React.Component {
         }
 
         return (
-            <div>
-                <table>
-                    <tr className= "watchingList-table-titles">
-                        <th>משחק</th>
-                        <th>תאריך</th>
-                        <th>ערוץ</th>
-                    </tr>
-                    { console.log(this.state.games)} 
-                    {this.state.games.map((game,index) => 
-                        <tr key={index}>
-                            <th>{game.EventName}</th>
-                            <th>{game.StartTime}</th>
-                            <th>{game.Channel}</th>
-                        </tr>   
-                    )}
-                </table>
+            <div className="watchingList-table-scrollableArea">
+                <div className="watchingList-table" >
+                    <div>לוח שידורים</div>
+                    <table cellspacing="0" cellpadding="0">
+                        <tbody> 
+                            <tr className= "watchingList-table-titles">
+                                <th>משחק</th>
+                                <th>תאריך</th>
+                                <th>ערוץ</th>
+                            </tr>
+                                {this.state.games.filter(g => moment(g.StartTime).isBefore(moment().add(2,'days')))
+                                    .map((game,index) => 
+                                        <tr className="watchingList-table-details" key={index}>
+                                            <th>{game.EventName}</th>
+                                            <th>{moment(game.StartTime).format('DD/MM/YYYY H:mm')}</th>
+                                            <th>{game.Channel}</th>
+                                        </tr>   
+                                )}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }

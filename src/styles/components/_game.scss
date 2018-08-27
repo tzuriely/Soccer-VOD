@@ -14,7 +14,7 @@
     {
         flex-direction: column; display: block;  max-width: none;
     }
-}
+}   
 
 .game-row {
     display: flex; align-items: center; justify-content: center;
@@ -89,6 +89,10 @@
     @media #{$breakMobileBig} {
         font-size: 1.8rem;
     }
+}
+
+.game-date {
+    margin-left: auto;
 }
 
 .game-link {

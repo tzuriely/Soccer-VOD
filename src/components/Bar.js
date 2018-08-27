@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBox from './SearchBox';
+
 class Bar extends React.Component {
     constructor(props) {
         super(props);

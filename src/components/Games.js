@@ -4,6 +4,7 @@ import Bar from './Bar';
 import Game from './Game';
 import {fetchGames} from '../actions/games';
 import {selectLeague} from '../actions/selectedLeague';
+import WatchingList from '../components/watchList/WatchingList'
 
 
 class Games extends React.Component {
@@ -11,7 +12,6 @@ class Games extends React.Component {
         super();
         this.onChoose = this.onChoose.bind(this);
         this.returnProviderImage = this.returnProviderImage.bind(this);
-
     }
 
     render()
@@ -25,23 +25,34 @@ class Games extends React.Component {
                         <div>Loading..........</div>
                     </div>) ;
           }
-        
+
         return (
                 <div>
                     <div>
                         <Bar onChoose = {this.onChoose}/>
                     </div>
-                    <div className='games-area'>
-                        <ul>
-                            {this.props.selectedGames.map((game, index) =>
-                            <Game key={index} link = {game.url}
-                            league = {game.league}
-                            title = {game.title}
-                            date = {game.LastUpdate}
-                            providerImage={this.returnProviderImage(game.providerId)}/>
-                            )}
-                        </ul>
+                    <div className="games-row">
+                        <div className="games-leftColumn">
+                            <div className="games-watchingArea">
+                                <WatchingList />
+                            </div>
+                        </div>
+                        <div className="games-rightColumn">
+                            <div className='games-area'>
+                                <ul>
+                                    {this.props.selectedGames.map((game, index) =>
+                                    <Game key={index} link = {game.url}
+                                    league = {game.league}
+                                    title = {game.title}
+                                    date = {game.LastUpdate}
+                                    providerImage={this.returnProviderImage(game.providerId)}
+                                    index={index}/>
+                                    )}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+    
                     {/* <GoogleAdd /> */}
                 </div>
         )
@@ -49,8 +60,10 @@ class Games extends React.Component {
 
     componentDidMount(){
         console.log('mount');
-        this.props.dispatch(fetchGames());
-        }
+        this.props.dispatch(fetchGames()).then(res => {
+                this.onChoose('Isreal-league');
+            });
+    }
     
     returnProviderImage(providerId) {
         console.log(providerId);

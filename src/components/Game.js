@@ -1,7 +1,8 @@
 import React from 'react';
+import moment from 'moment';
 
 const Game = (props) => (  
-    <div className='game' onClick={clickOnMobile}>
+    <div className='game' onClick={() => clickOnMobile(props.index)} id={props.index}>
         <div className='game-row'>
             <div className='game-column game-column-left'>
                 <a className='game-link' href={props.link} target="_blank">צפה</a>
@@ -17,15 +18,15 @@ const Game = (props) => (
         </div>
         <div className='game-details'>
             <div>{props.league}</div>
-            {/* <div> {new Date(props.date).toDateString()} </div> */}
-            <div> Undifiend</div>
+            {<div className='game-date'> {moment(props.date).format('DD/MM/YYYY H:mm')} </div>}
         </div>
     </div>
 )
 
-const clickOnMobile = (e) => {
-    if( window.innerWidth < 1024) {      
-        const link = document.getElementsByClassName('game-link');
+const clickOnMobile = (index) => {
+    if( window.innerWidth < 1024) {     
+        console.log(index); 
+        const link = document.getElementById(index).getElementsByClassName('game-link');
         link[0].click(); 
       } 
 }

@@ -25,7 +25,7 @@ export default function gamesProducer(state = gamesReducerDefaultState, action) 
             return {
                 ...state,
                 loading: true,
-                games: action.payload.games
+                games: action.payload.games,
             };
             
         case FETCH_GAMES_FAILURE:

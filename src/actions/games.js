@@ -1,6 +1,14 @@
+
 export const FETCH_GAMES_BEGIN   = 'FETCH_GAMES_BEGIN';
 export const FETCH_GAMES_SUCCESS = 'FETCH_GAMES_SUCCESS';
 export const FETCH_GAMES_FAILURE = 'FETCH_GAMES_FAILURE';
+export const UPDATE_SELECTED_LEAGUE = 'UPDATE_SELECTED_LEAGUE';
+
+
+const selectLeagueAction = (league = '') => ({
+    type: UPDATE_SELECTED_LEAGUE,
+    payload : league
+});
 
 export const fetchGamesBegin = () => ({
   type: FETCH_GAMES_BEGIN

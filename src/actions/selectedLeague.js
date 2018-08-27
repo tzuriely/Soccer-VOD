@@ -7,6 +7,8 @@ const selectLeagueAction = (league = '') => ({
 });
 
 export function selectLeague(games, league) {
+    console.log(league, games);
+
     return dispatch => {
         dispatch(selectLeagueAction(games.games[league]))
     }

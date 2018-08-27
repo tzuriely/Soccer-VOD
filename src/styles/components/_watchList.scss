@@ -9,12 +9,23 @@
 // .watchingList-table-timeColumn {
     
 // }
+.watchingList-table-scrollableArea {
+}
+
+.watchingList-table {
+    border: none; height: 100%;    overflow: hidden; position: relative;  
+
+}
+
 .watchingList-table-titles {
-    background: rgb(247, 145, 50);
-    color: antiquewhite;
-    font-size: 20px;
+    background: rgba(77, 149, 221,0.5); color: antiquewhite; font-size: 20px; 
 }
 
 .watchingList-table-details {
-
+    background: rgba(245, 245, 245, 0.85); color: rgb(80, 80, 80); font-size: 15px;
+    border: none; width: 100%; height: 25px;
 }
+
+table {border-spacing: 0px; width: 78%; margin-left: 11%; margin-right: 11%; overflow: auto; position: relative;
+}
+
