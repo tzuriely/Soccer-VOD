@@ -1,0 +1,54 @@
+.searchBox {
+    // background: white; width: 250px; height: 22px; 
+  
+    border: none; display: flex; align-items: center;
+
+    @media #{$breakMobile} {
+        width: 350px; height: 45px; box-shadow: none;
+    }
+}
+
+.SearchBox:hover {
+    cursor: pointer;
+}
+
+.searchBox-icon {
+    color: #76323F; font-size: 28px;
+    height: 100%; width: 50px; display: none;
+    align-items: center; justify-content: center; 
+
+    @media #{$breakMobile} {
+        width: 60px;
+    }
+}
+
+.searchBox-input {
+	width: 100%; margin-right: 10px; font-size: 20px; color: #f2eee9;
+	background: none; border-bottom: 1px solid #DE1B1B;	border-top: none; border-left: none; border-right: none;
+}
+.searchBox-input:focus {
+	outline: none;
+	border-bottom: 3px solid #DE1B1B;
+}
+
+::-webkit-input-placeholder {
+	color: #f2eee9;
+	//font-weight: bold;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: #f2eee9;
+	//font-weight: bold;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #f2eee9;
+	//font-weight: bold;
+}
+
+:-ms-input-placeholder {
+	color: #f2eee9;
+	//font-weight: bold;
+}

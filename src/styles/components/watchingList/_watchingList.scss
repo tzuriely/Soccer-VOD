@@ -1,0 +1,41 @@
+.watchingList {
+    margin: 0 auto; padding-top: 30px;   
+}
+.watchingList-scroll {
+    overflow-y: auto; height: 300px; width: 95%; margin-top: 10px;
+    background: #f5f5f5; padding-top: 2px; padding-bottom: 2px;
+    padding-left: 3px; padding-right: 3px; border-radius: 20px 8px;
+
+}
+.watchingList-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.watchingList-scroll::-webkit-scrollbar-track {
+    background: #c3d7df; 
+}
+ 
+/* Handle */
+.watchingList-scroll::-webkit-scrollbar-thumb {
+    background: #6991ac; 
+}
+
+/* Handle on hover */
+.watchingList-scroll::-webkit-scrollbar-thumb:hover {
+    background: #67727a; 
+}
+
+.watchingList-title {
+    display: flex; align-items: center; justify-content: center;  margin: 0 auto;
+    font-size: 22px; color: #c14e4e;
+}
+
+.watchingList-date {
+    font-size: 16px;  color: #67727a; text-align: center; padding-top: 2px; padding-right: 2px;
+}
+
+.watchingList-hr {
+    border: 0; height: 1px; width: 250px;
+    background-image: linear-gradient(to right, rgba(205, 223, 226, 0), rgba(205, 223, 226, 0.75), rgba(205, 223, 226, 0));
+}

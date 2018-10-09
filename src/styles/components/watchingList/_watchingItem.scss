@@ -1,0 +1,21 @@
+.watchingItem {
+     font-size: 15px; padding-top: 5px; padding-bottom: 5px; direction:  rtl;
+     display: flex; align-items: center; justify-content: center;  color: #6991ac;
+}
+.watchingItem ::after {
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+.watchItem-channel {
+    width: 20%; text-align: right;
+}
+
+.watchItem-game {
+    width: 80%; text-align: center;
+}
+
+.watchItem-time {
+    width: 20%; text-align: left;
+}

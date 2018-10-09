@@ -1,0 +1,42 @@
+$duration: 450ms;
+$tileWidth: 250px;
+$tileHeight: ($tileWidth / (16/9));
+$iconSize: 50px;
+$growFactor: 1.5; // 1.5 times the original size
+
+$moveLeft: -($tileWidth * ($growFactor - 1) / 2);
+$moveRight: $tileWidth * ($growFactor - 1);
+
+
+.slider {
+    overflow-x: scroll; width: 90%; height: 100%;
+    margin-top: 10px; margin-left: auto;  margin-right: auto;
+}
+
+.slider::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.slider::-webkit-scrollbar-track {
+  background: #c3d7df; 
+}
+
+/* Handle */
+.slider::-webkit-scrollbar-thumb {
+  background: #6991ac; 
+}
+
+/* Handle on hover */
+.watchingList-scroll::-webkit-scrollbar-thumb:hover {
+  background: #67727a; 
+}
+
+.slider-wrapper {
+    transition: $duration transform;  font-size: 0; white-space: nowrap;  padding-bottom: 10px; // Account for OS X scroll bar
+    display: flex; align-items: center; justify-content: center;  width: 100%;  margin-left: 50px;
+  }
+  .slider-wrapper:hover {
+    transform: translate3d($moveLeft, 0, 0)
+
+  }

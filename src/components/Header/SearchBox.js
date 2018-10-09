@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import {fetchSearch} from '../actions/search';
+import {fetchSearch} from '../../actions/search';
+import { Link, Redirect } from 'react-router-dom';
+
 
 
 
@@ -12,27 +14,31 @@ class SearchBox extends React.Component {
 
         this.state = {
             query:''
-        }
+            }
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleOnClick = this.handleOnClick.bind(this);
-        this.handleOnEnter = this.handleOnEnter.bind(this);
-
-
+        this.handleOnEnter = this.handleOnEnter.bind(this);        
     }
 
     render() {
 
         var mainClassName="searchBox " + this.props.className;
+        
         return (
+            
             <div className= {mainClassName}>
-                <div className="searchBox-icon" onClick={this.handleOnClick}>
-                    <FontAwesomeIcon icon={faSearch} />                     
-                </div>
-                <input className="searchBox-input" type="text" placeholder="חיפוש"
+                <input className="searchBox-input" type="text" placeholder="Search"
                 value={this.state.query}
                 onChange={this.handleInputChange}
                 onKeyDown={this.handleOnEnter} />
+                <div className="searchBox-icon" >
+                    <li> 
+                        <Link to={'/league/' + this.state.query} id="search-button">
+                            <FontAwesomeIcon icon={faSearch} />
+                        </Link>
+                     </li>                   
+                </div>
             </div>
         )
     }
@@ -45,10 +51,12 @@ class SearchBox extends React.Component {
     }
 
     handleOnEnter = (e) => {
-        if(e.keyCode == 13)
-        {
+        if(e.keyCode == 13) {
             console.log(this.state.query);
-            this.props.startSearch(this.state.query);
+            const button = document.getElementById('search-button');
+            console.log(button);
+            button.click();
+            // this.props.startSearch(this.state.query);
         }
         else {
         }

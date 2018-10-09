@@ -1,16 +1,12 @@
 .games-area {
-
     @media #{$breakMobile} {
-        padding-top: 15px; display: flex; align-items: center; justify-content: center;
+        padding-top: 0px; display: flex; align-items: center; justify-content: center;
         width: 100%;
     }
 }
 
-.games-watchingArea{
-}
-
 .games-row {
-    display: flex; padding-top: 220px; margin-top: 30px;
+    display: flex; 
     @media #{$breakMobile} {
         padding: 15px;
     }
@@ -22,16 +18,16 @@
     clear: both;    
 }
 
-.games-rightColumn {
-    width:65%;
+.games-leftColumn {
+    width:80%;
 
     @media #{$breakMobile} {
         width: 100%;
     }
 }
 
-.games-leftColumn {
-    width: 35%; 
+.games-rightColumn {
+    width: 20%; 
 
     @media #{$breakMobile} {
         display: none;

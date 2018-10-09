@@ -1,0 +1,39 @@
+.gamesList {
+    list-style: none; top: 20px; bottom: 20px; left: 20px; font-size: 18px;
+    right: 20px; overflow-y: scroll; margin: 0; padding: 0;  height: 400px;
+
+}
+.gamesList::-webkit-scrollbar {
+    /* width */
+    width: 10px;
+}
+
+/* Track */
+.gamesList::-webkit-scrollbar-track {
+    background: #c3d7df; 
+}
+ 
+/* Handle */
+.gamesList::-webkit-scrollbar-thumb {
+    background: #6991ac; 
+}
+
+/* Handle on hover */
+.gamesList::-webkit-scrollbar-thumb:hover {
+    background: #67727a; 
+}
+.gamesList-item {
+    padding: 10px 20px; height: 50px; margin-top: 10px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background: #f5f5f5; 
+    &:last-child {
+      border-bottom: none;
+    }
+}
+.gamesList-item:hover {
+    background: #d75c37; transition: 0.5s; cursor: pointer;
+}
+
+.gameList-link {
+    text-decoration: none; color: inherit;
+}

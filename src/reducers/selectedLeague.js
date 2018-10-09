@@ -13,7 +13,6 @@ export default (state = selectedLeagueReducerDefaultState, action) =>{
             return action.payload;
 
         default:
-            return state;
-            
+            return state;    
     }
 };
