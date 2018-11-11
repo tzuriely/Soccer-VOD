@@ -3874,7 +3874,7 @@ prop-types-exact@^1.1.1:
     has "^1.0.1"
     object.assign "^4.0.4"
 
-prop-types@^15.5.10, prop-types@^15.5.6:
+prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.6.0:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -4060,6 +4060,13 @@ react-moment@^0.7.7:
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.7.9.tgz#fc6b5bf8952d27f134a42abfd7f42df2c839c1d7"
 
+react-on-visible@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/react-on-visible/-/react-on-visible-1.5.1.tgz#084460f478f9e34336797dd156bbd1d6873cf2d2"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.0"
+
 react-player@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.6.6.tgz#336de320fc8c0610d8f2292ec16b0056312a1964"
@@ -4114,6 +4121,10 @@ react-router@^4.1.1:
     path-to-regexp "^1.5.3"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-video-thumbnail@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/react-video-thumbnail/-/react-video-thumbnail-0.1.3.tgz#698dc4f4e7bebcb598425929db231a78cbcdbdcd"
 
 react@15.6.1:
   version "15.6.1"

@@ -1,0 +1,47 @@
+.gamesListItem {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    &:hover {
+        background: $white;
+    }
+}
+
+
+.gamesListItem-image {
+    height: 80px; width: 110px;
+    
+    @media #{$breakMobileBig} {
+        height: 160px; width: 220px;
+    }
+}
+
+.gamesListItem-reactPlayer {
+    height: 80px; width: 110px;
+
+    @media #{$breakMobileBig} {
+        height: 160px; width: 220px;
+    }
+}
+
+.gamesListItem-details {
+    padding-left: 10px; text-decoration: none;
+    font-size: $s-size;
+
+    @media #{$breakMobileBig} {
+        font-size: $m-size;
+    }
+}
+
+.gamesListItem-details-title {
+    font-weight: bold; color: $dark-gray;
+    
+}
+
+.gamesListItem-details-date {
+    color: $gray;
+}
+
+.gamesListItem-details-league {
+    color: $gray;
+}

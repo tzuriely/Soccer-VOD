@@ -1,5 +1,11 @@
 .container {
-  width: 100%;
-  text-align: center;
   margin: 0 auto;
+  text-align: left;
+  width: 80%;
+  @media #{$breakLaptop} {
+    width: 90%;
+  }
+  @media #{$breakMobile}{
+    width: 100%;
+  }
 }

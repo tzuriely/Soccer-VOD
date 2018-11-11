@@ -1,0 +1,26 @@
+.logoHeader {
+    display: flex; justify-content: space-between
+
+    
+}
+
+.logoHeader-logo-wrapper {
+    overflow: hidden; position: relative; width: 100%;
+}
+
+.logoHeader-logo {
+    overflow: hidden; position: relative;
+}
+
+.logoHeader-icon {
+    width: 70px; float: left;
+}
+
+.logoHeader-text {
+    margin-left: 90px; position: absolute; bottom: 0px;
+    font-size: $l-size; color: $red; font-weight: bold;
+}
+
+.logoHeader-message {
+    display: flex; align-items: center;justify-content: center; width: 300px;
+}

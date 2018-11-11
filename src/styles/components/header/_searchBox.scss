@@ -3,9 +3,16 @@
   
     border: none; display: flex; align-items: center;
 
-    @media #{$breakMobile} {
-        width: 350px; height: 45px; box-shadow: none;
-    }
+    // @media #{$breakMobile} {
+    //     width: 350px; height: 45px; box-shadow: none;
+	// }
+	
+    // @media #{$breakMobileBig} {
+	// 	width: auto;    
+	// }
+	// @media #{$breakMobileSmall} {
+	// 	width: 200px; display: block;
+    // }
 }
 
 .SearchBox:hover {
@@ -23,32 +30,35 @@
 }
 
 .searchBox-input {
-	width: 100%; margin-right: 10px; font-size: 20px; color: #f2eee9;
-	background: none; border-bottom: 1px solid #DE1B1B;	border-top: none; border-left: none; border-right: none;
+	width: 100%; margin-right: 10px; font-size: $m-size; color: $dark-gray;
+	background: none; border-bottom: 1.5px solid $red;	border-top: none; border-left: none; border-right: none;
+	// @media #{$breakMobile} {
+    //     margin-right: 53px; font-size: 15px;
+    // }
 }
 .searchBox-input:focus {
 	outline: none;
-	border-bottom: 3px solid #DE1B1B;
+	border-bottom: 3px solid $red;
 }
 
 ::-webkit-input-placeholder {
-	color: #f2eee9;
+	color: $dark-gray;
 	//font-weight: bold;
 }
 
 :-moz-placeholder {
 	/* Firefox 18- */
-	color: #f2eee9;
+	color: $dark-gray;
 	//font-weight: bold;
 }
 
 ::-moz-placeholder {
 	/* Firefox 19+ */
-	color: #f2eee9;
+	color: $dark-gray;
 	//font-weight: bold;
 }
 
 :-ms-input-placeholder {
-	color: #f2eee9;
+	color: $dark-gray;
 	//font-weight: bold;
 }

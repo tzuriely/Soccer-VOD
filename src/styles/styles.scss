@@ -1,19 +1,23 @@
 @import './base/settings';
 @import './base/base';
-@import './components/games/game';
-@import './components/games/games';
-@import './components/games/gamesList';
 @import './components/container';
-@import './components/watchingList/watchingList';
-@import './components//watchingList/watchingItem';
 @import './components/appRouter';
-@import './components/header/pageTitle';
-@import './components/header/leagueMenu';
-@import './components/header/logo';
-@import './components/header/searchBox';
-@import './components/header/header';
-@import './components/games/SideBar/menuButton';
-@import './components/games/SideBar/menu';
-@import './components/games/SideBar/_menuContainer';
-@import './components/games/Carousel/slider';
-@import './components/games/Carousel/slide';
+
+@import './components//Header/topHeader';
+@import './components/Header/searchBox';
+@import './components/Header/menu';
+@import './components/Header/header';
+@import'./components//Header//logoHeader';
+
+@import './components/Games/gamesGrid';
+@import './components//Games/gamesLinkItem';
+
+@import './components/Games/Player/player';
+@import './components/Games/Player/gamesListItem';
+@import './components/Games/Player/gamesList';
+
+@import './components/Pages/homePage';
+@import './components/Pages/leaguePage';
+@import './components/Pages/searchPage';
+
+@import './components/Footer/footer';

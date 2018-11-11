@@ -36,6 +36,7 @@
     "react-dom": "15.6.1",
     "react-modal": "2.2.2",
     "react-moment": "^0.7.7",
+    "react-on-visible": "^1.5.1",
     "react-player": "^1.6.6",
     "react-redux": "5.0.5",
     "react-responsive-carousel": "^3.1.42",
@@ -50,6 +51,7 @@
     "webpack-dev-server": "2.5.1"
   },
   "devDependencies": {
-    "react-adsense": "^0.0.5"
+    "react-adsense": "^0.0.5",
+    "react-video-thumbnail": "^0.1.3"
   }
 }

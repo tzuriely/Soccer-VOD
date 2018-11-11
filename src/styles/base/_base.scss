@@ -8,8 +8,8 @@ html {
   // -moz-background-size: cover;
   // -o-background-size: cover;
   // background-size: cover;
-  // min-height: 100vh;
-  // min-width: 100vw;
+   min-height: 100vh;
+   min-width: 100vw;
 
   // @media #{$breakMobile} {
   //   background: url(/images/coverMobile.jpg) no-repeat center center fixed; 
@@ -19,24 +19,22 @@ html {
 
 body {
   font-family: Calibri, sans-serif;
-  font-size: $m-size;
-  margin: 0px;
-  padding: 0px;
+  // font-size: $m-size;
+  // margin: 0px;
+  // padding: 0px;
   
-  display: block;
-  height: 100vh;
-  justify-content: center;
-  width: 100vw;
+  // display: block;
+  // height: 100vh;
+  // justify-content: center;
+  // width: 100vw;
+  // max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
 }
 
-button {
-  cursor: pointer;
-}
-
-button:disabled {
+.inactiveLink {
+  pointer-events: none;
   cursor: default;
-}
-
-.is-active {
-  font-weight: bold;
 }

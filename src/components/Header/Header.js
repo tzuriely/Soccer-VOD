@@ -1,35 +1,20 @@
 import React from 'react';
+import TopHeader from './TopHeader';
+import Menu from './Menu';
+import LogoHeader from './LogoHeader';
 
-import PageTitle from './PageTitle';
-import SearchBox from './SearchBox';
-import LeagueMenu from './LeagueMenu';
-
-
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-
-    }
-    render() {
-        return(
-            <nav className="nav">
-                <div className="nav-primary">
-                    <div className="nav-top">
-                        <div className="nav-top-logo">
-                            Soccer-VOD
-                            {/* <img src="/images/logo.png"/> */}
-                        </div>
-                        <div className="nav-top-search">
-                            <SearchBox />
-                        </div>  
-                    </div> 
-                    <PageTitle />
-                </div>
-
-                <LeagueMenu />
-            </nav>
-        )
-    }
-}
+const Header = () => (
+    <div className="header">
+        <div className="header-top">
+            <TopHeader />
+        </div>
+        {/* <div className="header-logo">
+            <LogoHeader />
+        </div> */}
+        <div className="header-menu">
+            <Menu />
+        </div>
+    </div>
+)
 
 export default Header;

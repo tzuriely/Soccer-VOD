@@ -1,52 +1,60 @@
-
-export const FETCH_GAMES_BEGIN   = 'FETCH_GAMES_BEGIN';
-export const FETCH_GAMES_SUCCESS = 'FETCH_GAMES_SUCCESS';
-export const FETCH_GAMES_FAILURE = 'FETCH_GAMES_FAILURE';
-export const UPDATE_SELECTED_LEAGUE = 'UPDATE_SELECTED_LEAGUE';
-
-
-const selectLeagueAction = (league = '') => ({
-    type: UPDATE_SELECTED_LEAGUE,
-    payload : league
-});
-
-export const fetchGamesBegin = () => ({
-  type: FETCH_GAMES_BEGIN
-});
-
-export const fetchGamesSuccess = games => ({
-  type: FETCH_GAMES_SUCCESS,
-  payload: { games }
-});
-
-export const fetchGamesFailure = error => ({
-  type: FETCH_GAMES_FAILURE,
-  payload: { error }
-});
-
 //GET_ALL
-export function fetchGames() {
-    return (dispatch) => {
-        //dispatch(fetchGamesBegin());
-        return fetch("http://95.211.244.52:8080/api/events/getlastevents")
-        .then(handleErrors)
-        .then(res => res.json())
-        //.then(json => JSON.parse(json || '{}'))
-        .then(json => {
-            dispatch(fetchGamesSuccess(json));
-            return json;
-        })
-        .catch(error => { 
-            console.log(error);
-            dispatch(fetchGamesFailure(error));
-        }
-        );
-    }
+export const fetchLastEvents = () => {
+    return (fetch("http://95.211.244.52:5555/api/events/getlastevents")
+    .then(res => res.json()))
 };
 
-function handleErrors(response) {
-    if(!response.ok) {
-        throw Error(response.statusText);
-    }
-    return response;
-}
+export const fetchHottestGames = () => {
+    return (fetch("http://95.211.244.52:5555/api/HottestVideos/HottestGames")
+    .then(res => res.json()))
+};
+
+export const fetchLeague = (League) => {
+    // let LeagueForAPI="";
+    // switch (League) {
+    //     case "England-League":
+    //         LeagueForAPI="England";
+    //         break;
+    //     case "German-League":
+    //         LeagueForAPI="";
+    //         break;    
+    //     case "France-League":
+    //         LeagueForAPI="France";
+    //         break;
+    //     case "Isreal-League":
+    //         LeagueForAPI="";
+    //         break;
+    //     case "spanish-League":
+    //         LeagueForAPI="";
+    //         break;            
+    //     case "Italy-League":
+    //         LeagueForAPI="";
+    //         break;
+    //     case "Champions-League":
+    //         LeagueForAPI="";
+    //         break;
+    //     case "uefa-League":
+    //         LeagueForAPI="";
+    //         break;    
+    //     case "Other Leagues":
+    //         LeagueForAPI="";
+    //         break;        
+    //     default:
+    //         return "";
+    //     }
+        let apiString = "http://95.211.244.52:5555/api/events/GetLocationEvents/?locationName=" + League;
+        return (fetch(apiString)
+        .then(res => res.json()))
+};
+
+export const fetchEvent = (eventId) => {
+    let apiString = "http://95.211.244.52:5555/api/events/GetEvent/?Id=" + eventId;
+    return (fetch(apiString)
+    .then(res => res.json()))
+};
+
+export const fetchSearch = (textToFind) => {
+    let apiString = "http://95.211.244.52:5555/api/events/search?title=" + textToFind;
+    return (fetch(apiString)
+    .then(res => res.json()))
+};

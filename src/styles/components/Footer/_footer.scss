@@ -1,0 +1,39 @@
+.footer-container {
+    margin-top: 40px;
+
+}
+
+.footer {
+    width: 100%; height: 200px; color: $dark-gray;
+    font-size: $s-size; display: flex; justify-content: space-between;
+
+}
+
+.footer-terms {
+    padding-right: 150px;
+    @media #{$breakMobileBig} {
+        padding-left: 10px;
+    }
+}
+
+.footer-contact {
+    @media #{$breakMobileBig} {
+        padding-right: 10px;
+    }
+}
+
+.footer-contact-social {
+    
+}
+
+.footer-contact-social-title {
+    font-weight: bold; margin-bottom: 5px;
+}
+
+.footer-contact-mail {
+    
+}
+
+.footer-contact-social-icon {
+margin-right: 5px;
+}

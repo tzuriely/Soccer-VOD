@@ -1,0 +1,42 @@
+.player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.player {
+    width: 100%; height: 400px; 
+    @media #{$breakMobileSmall} {
+        height: 200px;
+    }
+}
+
+.player-reactPlayer {
+    width: 100%; height: 100%;
+}
+
+.player-details {
+
+}
+
+.player-details-title {
+    font-size: $ml-size; font-weight: bold; color: $red;
+    @media #{$breakMobileSmall} {
+        font-size: $m-size;
+    }
+}
+
+.player-details-date {
+    font-size: $m-size; color: $blue;
+
+    @media #{$breakMobileSmall} {
+        font-size: $s-size;
+    }
+}
+
+.player-details-league {
+    font-size: $m-size; color: $blue;
+
+    @media #{$breakMobileSmall} {
+        font-size: $s-size;
+    }
+}

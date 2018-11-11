@@ -1,0 +1,65 @@
+.leaguePage {
+}
+
+.leaguePage-content {
+    display: flex; 
+    @media #{$breakMobile} {
+        flex-direction: column; justify-content: center;
+        align-items: center; 
+
+    }
+}
+
+.leaguePage-title {
+    background: $blue; color: $white; width: 100%;
+     text-align: center; font-size: $m-size; margin-bottom: 20px;
+}
+
+.leaguePage-player {
+    flex: 70%;
+    padding-left: 10px;
+
+    @media #{$breakMobile} {
+        order: 1; width: 90%; flex:unset;
+    }
+}
+
+.leaguePage-gamesList  {
+    height: 700px; overflow: hidden; overflow-y: auto;
+
+    @media #{$breakMobile} {
+        height: auto; order: 2; margin-top: 120px; width: 90%;
+    }
+}
+
+.leaguePage-gamesList::-webkit-scrollbar {
+    width: 10px;
+
+    @media #{$breakMobile} {
+        display: none; 
+    }
+  }
+  
+  /* Track */
+  .leaguePage-gamesList::-webkit-scrollbar-track {
+    background: $azure; 
+    @media #{$breakMobile} {
+        display: none; 
+    }
+  }
+  
+  /* Handle */
+  .leaguePage-gamesList::-webkit-scrollbar-thumb {
+    background: $blue; 
+    @media #{$breakMobile} {
+        display: none; 
+    }
+  }
+  
+  /* Handle on hover */
+  .leaguePage-gamesList::-webkit-scrollbar-thumb:hover {
+    background: $blue; 
+    @media #{$breakMobile} {
+        display: none; 
+    }
+  }
